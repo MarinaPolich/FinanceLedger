@@ -1,0 +1,11 @@
+:root {
+    --bg-color: #FFFFFF;
+    --bg-form: #F4F4F4;
+    --primary: #28A745;
+    --acent-color: #2EBF4F;
+    --second-color: #0284D0;
+    --title-color: #333333;
+    --bg-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    --font-family: 'Open Sans';
+    --transition: 500ms linear;
+}
