@@ -18,7 +18,7 @@ const contactSchema = Yup.object().shape({
 export const FormContact = () => {
   const handleSubmit = (values) => {
     const formData = new FormData();
-
+    formData.append("form-name", "contact");
     for (const key of Object.keys(values)) {
       formData.append(key, values[key]);
     }
