@@ -11,6 +11,12 @@ import * as Yup from "yup";
 import { ReactSVG } from "react-svg";
 import { worning } from "../../assets/icon";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const contactSchema = Yup.object().shape({
   email: Yup.string().required("This is a required field"),
 });
@@ -26,7 +32,7 @@ export const FormContact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({ "form-name": "contact", ...values }), //new URLSearchParams(formData).toString(),
     })
       .then(() => (window.location.pathname = "/thank-you/")) //navigate("/thank-you/"))
       .catch((error) => alert(error));
