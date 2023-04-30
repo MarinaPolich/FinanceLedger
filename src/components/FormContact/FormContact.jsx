@@ -23,18 +23,12 @@ const contactSchema = Yup.object().shape({
 
 export const FormContact = () => {
   const handleSubmit = (values) => {
-    const formData = new FormData();
-    formData.append("form-name", "contact");
-    for (const key of Object.keys(values)) {
-      formData.append(key, values[key]);
-    }
-
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...values }), //new URLSearchParams(formData).toString(),
+      body: encode({ "form-name": "contact", ...values }),
     })
-      .then(() => (window.location.pathname = "/thank-you/")) //navigate("/thank-you/"))
+      .then(() => (window.location.pathname = "/thank-you/"))
       .catch((error) => alert(error));
   };
 
