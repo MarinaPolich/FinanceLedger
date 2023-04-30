@@ -11,7 +11,7 @@ export const Thumba = styled.div`
   aspect-ratio: 320 / 220;
 
   @media ${device.tablet} {
-    aspect-ratio: 368 / 589;
+    aspect-ratio: 368 / 394;
   }
 
   @media ${device.desktop} {

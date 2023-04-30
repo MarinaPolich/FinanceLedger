@@ -68,12 +68,16 @@ export const TextError = styled.p`
 
 export const ErrorBox = styled.div`
   position: absolute;
-  margin-top: -34px;
+  margin-top: -20px;
   margin-left: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @media ${device.desktop} {
+    margin-top: -34px;
+  }
 
   .error-icon {
     height: 16px;

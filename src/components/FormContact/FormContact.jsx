@@ -11,15 +11,15 @@ import * as Yup from "yup";
 import { ReactSVG } from "react-svg";
 import { worning } from "../../assets/icon";
 
+const contactSchema = Yup.object().shape({
+  email: Yup.string().required("This is a required field"),
+});
+
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
-
-const contactSchema = Yup.object().shape({
-  email: Yup.string().required("This is a required field"),
-});
 
 export const FormContact = () => {
   const handleSubmit = (values) => {
@@ -28,8 +28,10 @@ export const FormContact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...values }),
     })
-      .then(() => (window.location.pathname = "/thank-you/"))
-      .catch((error) => alert(error));
+      .then(() => {
+        alert("Thank you! Your form submission has been received.");
+      })
+      .catch((error) => alert("Error: Please try again!"));
   };
 
   return (
