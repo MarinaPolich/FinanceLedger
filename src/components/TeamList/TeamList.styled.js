@@ -44,7 +44,7 @@ export const PhotoThumba = styled.div`
 
   cursor: pointer;
   transform-origin: center;
-  transition: transform 500ms linear, box-shadow 500ms linear;
+  transition: transform var(--transition), box-shadow var(--transition);
 
   &::before {
     content: "";

@@ -3,6 +3,8 @@ import {
   ErrorBox,
   FormBox,
   InputForm,
+  LabelForm,
+  LabelText,
   TextError,
   TitleForm,
 } from "./FormContact.styled";
@@ -52,48 +54,58 @@ export const FormContact = () => {
           data-netlify-honeypot="bot-field"
         >
           <TitleForm>Request Callback</TitleForm>
-          <InputForm
-            type="text"
-            name="name"
-            autoComplete="username"
-            value={values.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-          />
-          {errors.name && touched.name ? (
-            <ErrorBox>
-              <ReactSVG
-                src={worning}
-                afterInjection={(svg) => {
-                  svg.setAttribute("height", "16");
-                }}
-                className="error-icon"
-                wrapper="div"
-              />
-              <TextError>{errors.name}</TextError>
-            </ErrorBox>
-          ) : null}
-          <InputForm
-            type="email"
-            name="email"
-            autoComplete="username"
-            value={values.email}
-            onChange={handleChange}
-            placeholder="Enter email*"
-          />
-          {errors.email && touched.email ? (
-            <ErrorBox>
-              <ReactSVG
-                src={worning}
-                afterInjection={(svg) => {
-                  svg.setAttribute("height", "15");
-                }}
-                className="error-icon"
-                wrapper="div"
-              />
-              <TextError>{errors.email}</TextError>
-            </ErrorBox>
-          ) : null}
+
+          <LabelForm>
+            <InputForm
+              id="name"
+              type="text"
+              name="name"
+              autoComplete="username"
+              value={values.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+            />
+            <LabelText>Enter your name</LabelText>
+            {errors.name && touched.name ? (
+              <ErrorBox>
+                <ReactSVG
+                  src={worning}
+                  afterInjection={(svg) => {
+                    svg.setAttribute("height", "16");
+                  }}
+                  className="error-icon"
+                  wrapper="div"
+                />
+                <TextError>{errors.name}</TextError>
+              </ErrorBox>
+            ) : null}
+          </LabelForm>
+
+          <LabelForm>
+            <InputForm
+              type="email"
+              name="email"
+              autoComplete="username"
+              value={values.email}
+              onChange={handleChange}
+              placeholder="Enter email*"
+            />
+            <LabelText>Enter email*</LabelText>
+            {errors.email && touched.email ? (
+              <ErrorBox>
+                <ReactSVG
+                  src={worning}
+                  afterInjection={(svg) => {
+                    svg.setAttribute("height", "15");
+                  }}
+                  className="error-icon"
+                  wrapper="div"
+                />
+                <TextError>{errors.email}</TextError>
+              </ErrorBox>
+            ) : null}
+          </LabelForm>
+
           <ButtonSolid type="submit">send</ButtonSolid>
         </FormBox>
       )}

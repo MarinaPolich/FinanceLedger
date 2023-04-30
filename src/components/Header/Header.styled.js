@@ -35,7 +35,7 @@ export const Logo = styled.div`
   margin-bottom: 10px;
   cursor: pointer;
   transform-origin: left;
-  transition: transform 500ms linear;
+  transition: transform var(--transition);
 
   @media ${device.tabDesk} {
     justify-content: flex-start;
