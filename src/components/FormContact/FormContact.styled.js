@@ -74,6 +74,7 @@ export const LabelText = styled.span`
   position: absolute;
   top: 16px;
   left: 8px;
+  transition: top var(--transition);
 `;
 
 export const TextError = styled.p`
