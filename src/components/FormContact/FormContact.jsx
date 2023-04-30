@@ -42,7 +42,12 @@ export const FormContact = () => {
       onSubmit={handleSubmit}
     >
       {({ handleChange, values, errors, touched }) => (
-        <FormBox name="contact" method="POST" data-netlify="true">
+        <FormBox
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <TitleForm>Request Callback</TitleForm>
           <InputForm
             type="name"
