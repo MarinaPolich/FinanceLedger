@@ -39,6 +39,7 @@ export const WrapperImageItem = styled.li`
 
   &::before {
     content: "";
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -62,4 +63,8 @@ export const Image = styled.picture`
     object-fit: cover;
     object-position: center center;
   }
+`;
+
+export const LinkImage = styled.a`
+  text-decoration: none;
 `;

@@ -29,11 +29,11 @@ export const TeamList = () => {
         <PhotoThumba>
           <Photo>
             <source
-              srcset={`${person1Webp} 1x, ${person1Webp2x} 2x`}
+              srcSet={`${person1Webp} 1x, ${person1Webp2x} 2x`}
               type="image/webp"
             />
             <source
-              srcset={`${person1Jpg} 1x, ${person1Jpg2x} 2x`}
+              srcSet={`${person1Jpg} 1x, ${person1Jpg2x} 2x`}
               type="image/jpeg"
             />
             <img src={`${person1Jpg}`} alt="John Doe" />
@@ -49,11 +49,11 @@ export const TeamList = () => {
         <PhotoThumba>
           <Photo>
             <source
-              srcset={`${person2Webp} 1x, ${person2Webp2x} 2x`}
+              srcSet={`${person2Webp} 1x, ${person2Webp2x} 2x`}
               type="image/webp"
             />
             <source
-              srcset={`${person2Jpg} 1x, ${person2Jpg2x} 2x`}
+              srcSet={`${person2Jpg} 1x, ${person2Jpg2x} 2x`}
               type="image/jpeg"
             />
             <img src={`${person2Jpg}`} alt="Jane Doe" />
@@ -69,11 +69,11 @@ export const TeamList = () => {
         <PhotoThumba>
           <Photo>
             <source
-              srcset={`${person3Webp} 1x, ${person3Webp2x} 2x`}
+              srcSet={`${person3Webp} 1x, ${person3Webp2x} 2x`}
               type="image/webp"
             />
             <source
-              srcset={`${person3Jpg} 1x, ${person3Jpg2x} 2x`}
+              srcSet={`${person3Jpg} 1x, ${person3Jpg2x} 2x`}
               type="image/jpeg"
             />
             <img src={`${person3Jpg}`} alt="Steve Smith" />

@@ -24,10 +24,11 @@ import {
 import { Hero } from "../Hero/Hero";
 import { ContainerWithImage } from "../ContainerWithImage/ContainerWithImage";
 import { Container } from "../Container/Container";
-import { ButtonOutline, ButtonSolid } from "../Button/Button";
+import { ButtonOutline } from "../Button/Button";
 import { Gallery } from "../Gallery/Gallery";
 import { TeamList } from "../TeamList/TeamList";
 import { Element } from "react-scroll";
+import { FormContact } from "../FormContact/FormContact";
 
 export const Main = () => {
   return (
@@ -40,11 +41,11 @@ export const Main = () => {
           <Thumba>
             <Image>
               <source
-                srcset={`${peopleWebp} 1x, ${people2xWebp} 2x`}
+                srcSet={`${peopleWebp} 1x, ${people2xWebp} 2x`}
                 type="image/webp"
               />
               <source
-                srcset={`${peopleJpg} 1x, ${people2xJpg} 2x`}
+                srcSet={`${peopleJpg} 1x, ${people2xJpg} 2x`}
                 type="image/jpeg"
               />
               <img src={`${peopleJpg}`} alt="People" />
@@ -81,11 +82,11 @@ export const Main = () => {
           <Thumba>
             <Image>
               <source
-                srcset={`${blogWebp} 1x, ${blog2xWebp} 2x`}
+                srcSet={`${blogWebp} 1x, ${blog2xWebp} 2x`}
                 type="image/webp"
               />
               <source
-                srcset={`${blogJpg} 1x, ${blog2xJpg} 2x`}
+                srcSet={`${blogJpg} 1x, ${blog2xJpg} 2x`}
                 type="image/jpeg"
               />
               <img src={`${blogJpg}`} alt="Blog" />
@@ -120,19 +121,18 @@ export const Main = () => {
           <Thumba>
             <Image>
               <source
-                srcset={`${contactWebp} 1x, ${contact2xWebp} 2x`}
+                srcSet={`${contactWebp} 1x, ${contact2xWebp} 2x`}
                 type="image/webp"
               />
               <source
-                srcset={`${contactJpg} 1x, ${contact2xJpg} 2x`}
+                srcSet={`${contactJpg} 1x, ${contact2xJpg} 2x`}
                 type="image/jpeg"
               />
               <img src={`${contactJpg}`} alt="Contact" />
             </Image>
           </Thumba>
           <Wrapper color={"var(--bg-form)"}>
-            <Title>Request Callback</Title>
-            <ButtonSolid type="submit">send</ButtonSolid>
+            <FormContact />
           </Wrapper>
         </ContainerWithImage>
       </Element>
