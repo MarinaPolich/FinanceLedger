@@ -56,7 +56,7 @@ export const FormContact = () => {
         >
           <TitleForm>Request Callback</TitleForm>
           <InputForm
-            type="name"
+            type="text"
             name="name"
             autoComplete="username"
             value={values.name}
