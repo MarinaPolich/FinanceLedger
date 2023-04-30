@@ -22,7 +22,7 @@ const encode = (data) => {
 };
 
 export const FormContact = () => {
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { resetForm }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -30,6 +30,7 @@ export const FormContact = () => {
     })
       .then(() => {
         alert("Thank you! Your form submission has been received.");
+        resetForm();
       })
       .catch((error) => alert("Error: Please try again!"));
   };
