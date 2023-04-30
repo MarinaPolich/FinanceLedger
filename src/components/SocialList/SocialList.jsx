@@ -14,7 +14,12 @@ export const SocialList = ({ classNameLink }) => {
     <WrapperIcon>
       {icons.map(({ icon, title, href }) => (
         <IconItem key={title}>
-          <IconLink href={href} className={classNameLink} title={title}>
+          <IconLink
+            href={href}
+            className={classNameLink}
+            title={title}
+            target="_blank"
+          >
             <ReactSVG
               src={icon}
               afterInjection={(svg) => svg.setAttribute("height", "35")}

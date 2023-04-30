@@ -42,7 +42,7 @@ export const FormContact = () => {
       onSubmit={handleSubmit}
     >
       {({ handleChange, values, errors, touched }) => (
-        <FormBox data-netlify="true">
+        <FormBox name="contact" data-netlify="true">
           <TitleForm>Request Callback</TitleForm>
           <InputForm
             type="name"
